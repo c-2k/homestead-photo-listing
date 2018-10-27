@@ -1,17 +1,51 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
-  "engines": {
-    "node": ">=6.13.0"
-  },
+  "name": "photo-listing-service",
+  "version": "1.0.0",
+  "description": "photo-listing-service",
+  "main": "index.js",
   "scripts": {
+    "test": "jest --coverage",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
+    "node": "nodemon ./server/server.js",
+    "data": "node ./database/data.js"
   },
-  "dependencies": {
+  "keywords": [],
+  "author": " <Jackie Chen> (https://github.com/thisisjackie)",
+  "license": "MIT",
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "setupTestFrameworkScriptFile": "<rootDir>/test/enzyme.js"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^22.3.0",
+    "react-hot-loader": "^4.3.11",
+    "regenerator-runtime": "^0.12.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "7.0.0-bridge.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.2",
+    "mongoose": "^5.3.6",
+    "morgan": "^1.9.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   }
 }
