@@ -1,24 +1,27 @@
-const path = require('path');
-
-const ENTRY_DIR = path.join(__dirname, '/client');
-const OUT_DIR = path.join(__dirname, '/public');
+const webpack = require("webpack");
 
 module.exports = {
-  entry: `${ENTRY_DIR}/App.jsx`,
-  output: {
-    path: OUT_DIR,
-    filename: 'App.js',
-  },
+  entry: "./src/index.js",
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'env']
-        },
-      },
-    ],
+        use: ["babel-loader"]
+      }
+    ]
   },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"]
+  },
+  output: {
+    path: __dirname + "/dist",
+    publicPath: "/",
+    filename: "bundle.js"
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    contentBase: "./dist",
+    hot: true
+  }
 };
