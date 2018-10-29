@@ -11,9 +11,4 @@ const photoSchema = new Schema ({
 
 const Photo = mongoose.model('Photo', photoSchema);
 
-const fetchAll = () => {
-  const file = Photo.find({});
-  return file.exec();
-};
-
 module.exports = Photo;

@@ -61,7 +61,7 @@ const samplePhotos = [
     photoId: '1775915158',
     description:
       'est et tempus semper est quam pharetra magna ac consequat metus',
-  }
+  },
 ];
 
 const insertSamplePhotos = () => {
