@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import Photos from './photoStream.jsx';
+import PhotoStream from './photoStream.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
     return (<div>
       <h1>Hello World</h1>
-      <Photos photo={this.state.photo}/>
+      <PhotoStream photo={this.state.photo}/>
     </div>)
 console.log(this.state.photo)
   }

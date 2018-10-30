@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.top {
+    height:294px;
+    width:441px;
+    align-self: flex-start;
+    justify-content: flex-start
+}
+
+.bottom {
+    height:294px;
+    width:441px;
+    align-self: flex-end;
+    justify-content: flex-start
+}
+
+.big {
+  height:590px;
+  width:885px;
+}
