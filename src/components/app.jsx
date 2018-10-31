@@ -6,15 +6,17 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      photo: [],
+      photos: [],
+      id: 0,
     };
     // this.componentDidMount();
   }
 
   componentDidMount() {
-    $.get('/api/photos', data => {
+    const {id} = this.state;
+    $.get(`/listing-photos/${id}`, data => {
       this.setState({
-        photo: data,
+        photos: data,
       });
     }, 'json');
   }
@@ -22,10 +24,11 @@ class App extends React.Component {
   render() {
     return (<div>
       <h1>Hello World</h1>
-      <PhotoStream photo={this.state.photo}/>
+      <PhotoStream photos={this.state.photos}/>
     </div>)
-console.log(this.state.photo)
+console.log(this.state.photos)
   }
+
 }
 
 export default App;

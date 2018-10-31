@@ -7,6 +7,7 @@ const photoSchema = new Schema ({
   url: String,
   photoId: Number,
   description: String,
+  listingId: Number,
 });
 
 const Photo = mongoose.model('Photo', photoSchema);

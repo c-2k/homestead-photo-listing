@@ -14,16 +14,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/../dist'));
 
-app.get('/api/photos', (req, res) => {
-  Photos.find()
+app.get(`/listing-photos/:listingId`, (req, res) => {
+  console.log('listingId', req.params.listingId)
+  const id = req.params.listingId;
+  Photos.find({ listingId: id })
     .then(data => {
       res.send(data)
     })
     .catch(err => {
       console.log(err)
     })
-
-});
+})
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
