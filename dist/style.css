@@ -1,13 +1,14 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .small {
-    height:294px;
-    width:441px;
+    height:25%;
+    width:25%;
 }
 
 .big {
-  height:590px;
-  width:885px;
+  height:50%;
+  width:50%;
 }
