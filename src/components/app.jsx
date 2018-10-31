@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import PhotoStream from './photoStream.jsx';
+import Slider from './photoView.jsx'
 
 class App extends React.Component {
   constructor() {
@@ -8,8 +9,16 @@ class App extends React.Component {
     this.state = {
       photos: [],
       id: 0,
+      view: 'gallery',
+      photoId: 0,
     };
     // this.componentDidMount();
+  }
+
+  changeView(view) {
+      this.setState({
+        view: view
+      });
   }
 
   componentDidMount() {
@@ -21,11 +30,28 @@ class App extends React.Component {
     }, 'json');
   }
 
+  renderView () {
+    const {view} = this.state
+
+    if (view === 'gallery') {
+      return <PhotoStream photos={this.state.photos} photoId={this.state.photoId} view={() => this.changeView('slide')}
+      />
+    } else if (view === 'slide') {
+      return <Slider photos={this.state.photos}/>
+    }
+  }
+
   render() {
+    if(this.state.photos){
     return (<div>
       <h1>Hello World</h1>
-      <PhotoStream photos={this.state.photos}/>
+      <div>
+      {this.renderView()}
+      </div>
     </div>)
+    } else {
+      return (<div>Loading...</div>)
+    }
 console.log(this.state.photos)
   }
 

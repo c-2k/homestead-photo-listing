@@ -1,9 +1,17 @@
 import React from 'react';
-import Photo from './photo.jsx'
 
 const PhotoStream = props => (
   <div>
-  <Photo photos={props.photos}/>
+    {props.photos.map((ele, index) => {
+      if (index === 0) {
+        return <img src={ele.url} className='big' onClick={() => props.view()}/>
+      }
+
+      if (index < 5) {
+        return <img src={ele.url} className='small' onClick={() => props.view()}/>
+      }
+    })
+    }
   </div>
 );
 
