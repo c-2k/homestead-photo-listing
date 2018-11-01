@@ -2,7 +2,7 @@ import React from 'react';
 import Photo from './photo.jsx'
 
 const PhotoStream = props => (
-  <div className>
+  <div className='container'>
       {props.photos.map((ele, index) => {
         if(index===0){
           return <div className='main'>

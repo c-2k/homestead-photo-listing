@@ -20,9 +20,4 @@ describe('app tests', () => {
     // Check if an element in the Component exists
     expect(w).toBeTruthy()
   })
-
-  it('renders a className', () => {
-    const w = mount(<App />);
-    expect(w.find()).toBeTruthy()
-  })
 });
