@@ -10,14 +10,16 @@ class App extends React.Component {
       photos: [],
       id: 0,
       view: 'gallery',
-      photoId: 0,
+      index: 0,
     };
     // this.componentDidMount();
+    this.changeView = this.changeView.bind(this)
   }
 
-  changeView(view) {
+  changeView(view, num) {
       this.setState({
-        view: view
+        view: view,
+        index: num
       });
   }
 
@@ -34,10 +36,10 @@ class App extends React.Component {
     const {view} = this.state
 
     if (view === 'gallery') {
-      return <PhotoStream photos={this.state.photos} photoId={this.state.photoId} view={() => this.changeView('slide')}
+      return <PhotoStream photos={this.state.photos} view={this.changeView}
       />
     } else if (view === 'slide') {
-      return <Slider photos={this.state.photos}/>
+      return <Slider photos={this.state.photos} index={this.state.index} view={this.changeView}/>
     }
   }
 
@@ -45,7 +47,7 @@ class App extends React.Component {
     if(this.state.photos){
     return (<div>
       <h1>Hello World</h1>
-      <div>
+      <div >
       {this.renderView()}
       </div>
     </div>)

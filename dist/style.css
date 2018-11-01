@@ -3,14 +3,38 @@
   flex-wrap: wrap;
 }
 
-.small {
-    height:25%;
-    width:25%;
+.sideBar1{
+   flex-direction: column;
 }
 
-.big {
-  height:50%;
-  width:50%;
+
+.sideBar2{
+   flex-direction: column;
+}
+
+.photo0{
+  height: 885px;
+  width: 590px;
+}
+
+.photo1{
+  height: 294;
+  width: 441;
+}
+
+.photo2{
+  height: 294;
+  width: 441;
+}
+
+.photo3{
+  height: 294;
+  width: 441;
+}
+
+.photo4{
+  height: 294;
+  width: 441;
 }
 
 .slider {

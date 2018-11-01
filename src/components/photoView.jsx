@@ -1,12 +1,11 @@
 import React from 'react';
-
 class Slider extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       images: this.props.photos,
-      currentIndex: 0,
+      currentIndex: this.props.index,
       translateValue: 0,
     }
     this.goToPrevSlide = this.goToPrevSlide.bind(this)
@@ -48,18 +47,20 @@ class Slider extends React.Component {
 
   render() {
     console.log('WHERE MY PROPS AT?',this.props)
+    console.log('WHERE MY STATE AT?', this.state)
     if (this.state.images){
       return (
-        <div className="slider">
-
+        <div className="slider" >
+          <button onClick={() => this.props.view('gallery')}>X</button>
+          <br />
           <div className="slider-wrapper"
             style={{
               transform: `translateX(${this.state.translateValue}px)`,
               transition: 'transform ease-out 0.45s'
-            }}>
+            }} onClick={this.goToNextSlide}>
               {
-                this.props.photos.map((image, i) => (
-                  <Slide key={i} image={image.url} />
+                this.props.photos.map((image, i, arr) => (
+                    <Slide key={i} image={image} />
                 ))
               }
           </div>
@@ -71,6 +72,7 @@ class Slider extends React.Component {
           <RightArrow
            goToNextSlide={this.goToNextSlide}
           />
+          <br />
         </div>
       );
     } else {
@@ -82,12 +84,12 @@ class Slider extends React.Component {
 
 const Slide = ({ image }) => {
   const styles = {
-    backgroundImage: `url(${image})`,
+    backgroundImage: `url(${image.url})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%'
   }
-  return <div className="slide" style={styles}></div>
+  return <div className="slide" style={styles} ></div>
 }
 
 
