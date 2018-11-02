@@ -28,6 +28,12 @@ app.get('/listing-photos/:listingId', (req, res) => {
     })
 })
 
+const html = path.join(__dirname, '/../dist/index.html');
+
+app.get('/:listingId', (req, res) => {
+  res.sendFile(html);
+});
+
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });

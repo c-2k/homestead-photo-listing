@@ -1,47 +1,108 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  width: 1440px;
+  height: 440px;
+  overflow: hidden;
+  border: 1px solid gray;
 }
 
-.sideBar1{
-   flex-direction: column;
+.main {
+  width: 720px;
+  height: 440px;
+  align-self: flex-start;
+  overflow: hidden;
 }
 
+.sidePics {
+  width: 720px;
+  height: 440px;
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.sideBar2{
-   flex-direction: column;
+.viewPhoto {
+  position: absolute;
+  top: 390px;
+  left: 1305px;
+}
+
+.pho1{
+   width: 360px;
+   height: 220px;
+  overflow: hidden;
+}
+
+.pho2{
+   width: 360px;
+   height: 220px;
+  overflow: hidden;
+}
+
+.pho3{
+   width: 360px;
+   height: 220px;
+  overflow: hidden;
+}
+
+.pho4{
+   width: 360px;
+   height: 220px;
+  overflow: hidden;
 }
 
 .photo0{
-  height: 885px;
-  width: 590px;
+  width: 720px;
+  height: 440px;
+  align-self: flex-start;
+}
+
+.photo0:hover{
+  zoom: 105%;
+}
+
+.photo1:hover{
+  zoom: 105%
+}
+
+.photo2:hover{
+  zoom: 105%
+}
+
+.photo3:hover{
+  zoom: 105%
+}
+
+.photo4:hover{
+  zoom: 105%
 }
 
 .photo1{
-  height: 294;
-  width: 441;
+   width: 360px;
+   height: 220px;
 }
 
 .photo2{
-  height: 294;
-  width: 441;
+   width: 360px;
+   height: 220px;
 }
 
 .photo3{
-  height: 294;
-  width: 441;
+   width: 360px;
+   height: 220px;
 }
 
 .photo4{
-  height: 294;
-  width: 441;
+   width: 360px;
+   height: 220px;
 }
 
 .slider {
   position: relative;
-  width: 500px;
+  width: 750px;
   margin: 0 auto;
-  height: 500px;
+  height: 750px;
   overflow: hidden;
   white-space: nowrap;
 }

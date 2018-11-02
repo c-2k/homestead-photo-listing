@@ -8,7 +8,6 @@ class App extends React.Component {
     super();
     this.state = {
       photos: [],
-      id: 0,
       view: 'gallery',
       index: 0,
     };
@@ -24,7 +23,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const {id} = this.state;
+    const id = Number(window.location.pathname.replace(/\//,''));
     $.get(`/listing-photos/${id}`, data => {
       this.setState({
         photos: data,
@@ -45,8 +44,8 @@ class App extends React.Component {
 
   render() {
     if(this.state.photos){
-    return (<div>
-      <h1>Hello World</h1>
+      return (<div>
+        <h1>Hello World</h1>
       <div >
       {this.renderView()}
       </div>

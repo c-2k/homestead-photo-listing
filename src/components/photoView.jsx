@@ -5,7 +5,7 @@ class Slider extends React.Component {
 
     this.state = {
       images: this.props.photos,
-      currentIndex: this.props.index,
+      currentIndex: 0,
       translateValue: 0,
     }
     this.goToPrevSlide = this.goToPrevSlide.bind(this)
@@ -89,7 +89,9 @@ const Slide = ({ image }) => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%'
   }
-  return <div className="slide" style={styles} ></div>
+  return <div className="slide" style={styles} >
+    <h3>{image.description}</h3>
+  </div>
 }
 
 
