@@ -1,64 +1,74 @@
+/*MAIN COMPONENT CSS*/
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 1440px;
-  height: 440px;
-  overflow: hidden;
+  width: 100%;
+  height: 50%;
   border: 1px solid gray;
 }
 
-.main {
-  width: 720px;
-  height: 440px;
-  align-self: flex-start;
-  overflow: hidden;
-}
-
 .mainPic {
-  width: 720px;
-  height: 440px;
+  width:50%;
+}
+
+.mPhoto{
+  height: 100%;
+  width:100%;
+  min-width: 712px;
+}
+
+.main {
+  height: 100%;
   align-self: flex-start;
-}
-
-.sidePics {
-  width: 720px;
-  height: 440px;
-  align-self: flex-end;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.side{
-   width: 360px;
-   height: 220px;
   overflow: hidden;
 }
+
+.sidePics{
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row: auto auto;
+}
+
+.side {
+  height: 100%;
+  border: 1px solid gray;
+  overflow: hidden;
+}
+
 
 .sPhoto{
-   width: 360px;
-   height: 220px;
+  height: 100%;
+  width:100%;
+  min-width: 350px;
 }
 
 .mainPic img:hover {
-  zoom:105%;
+  transform: scale(1.05);
 }
 
 .side img:hover {
-  zoom:105%;
+  transform: scale(1.05)
 }
 
+
+/*BUTTON*/
 
 .viewPhoto {
   position: absolute;
-  top: 390px;
-  left: 1305px;
+  top: 60%;
+  left: 80%;
 }
+
+
+/*SLIDER CSS*/
 
 .slider {
   position: relative;
-  width: 750px;
+  width: 50%;
   margin: 0 auto;
-  height: 750px;
+  height: 50%;
   overflow: hidden;
   white-space: nowrap;
 }

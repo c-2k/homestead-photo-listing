@@ -3,7 +3,6 @@ import React from 'react';
 import { shallow, mount, render } from './jest.setup.js';
 
 import App from '../src/components/app.jsx';
-import Photostream from '../src/components/photoStream.jsx';
 
 describe('app tests', () => {
   it('renders list-items', () => {
