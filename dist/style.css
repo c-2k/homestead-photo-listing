@@ -14,6 +14,12 @@
   overflow: hidden;
 }
 
+.mainPic {
+  width: 720px;
+  height: 440px;
+  align-self: flex-start;
+}
+
 .sidePics {
   width: 720px;
   height: 440px;
@@ -22,80 +28,30 @@
   flex-wrap: wrap;
 }
 
+.side{
+   width: 360px;
+   height: 220px;
+  overflow: hidden;
+}
+
+.sPhoto{
+   width: 360px;
+   height: 220px;
+}
+
+.mainPic img:hover {
+  zoom:105%;
+}
+
+.side img:hover {
+  zoom:105%;
+}
+
+
 .viewPhoto {
   position: absolute;
   top: 390px;
   left: 1305px;
-}
-
-.pho1{
-   width: 360px;
-   height: 220px;
-  overflow: hidden;
-}
-
-.pho2{
-   width: 360px;
-   height: 220px;
-  overflow: hidden;
-}
-
-.pho3{
-   width: 360px;
-   height: 220px;
-  overflow: hidden;
-}
-
-.pho4{
-   width: 360px;
-   height: 220px;
-  overflow: hidden;
-}
-
-.photo0{
-  width: 720px;
-  height: 440px;
-  align-self: flex-start;
-}
-
-.photo0:hover{
-  zoom: 105%;
-}
-
-.photo1:hover{
-  zoom: 105%
-}
-
-.photo2:hover{
-  zoom: 105%
-}
-
-.photo3:hover{
-  zoom: 105%
-}
-
-.photo4:hover{
-  zoom: 105%
-}
-
-.photo1{
-   width: 360px;
-   height: 220px;
-}
-
-.photo2{
-   width: 360px;
-   height: 220px;
-}
-
-.photo3{
-   width: 360px;
-   height: 220px;
-}
-
-.photo4{
-   width: 360px;
-   height: 220px;
 }
 
 .slider {
