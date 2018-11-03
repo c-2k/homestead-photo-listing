@@ -1,9 +1,10 @@
-const mongoose = require("mongoose");
-const db = require("./index.js");
+const mongoose = require('mongoose');
+const db = require('./index.js');
+
 mongoose.Promise = global.Promise;
 const Schema = mongoose.Schema;
 
-const photoSchema = new Schema ({
+const photoSchema = new Schema({
   url: String,
   photoId: Number,
   description: String,

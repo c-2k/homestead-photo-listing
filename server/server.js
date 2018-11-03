@@ -1,9 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 
-const Photos = require('../database/database.js')
+const Photos = require('../database/database.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,20 +11,28 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(morgan('dev'));
-app.use(express.static(__dirname + '/../dist'));
+const dist = path.join(__dirname, '/../dist');
 
-app.get(`/listing-photos/:listingId`, (req, res) => {
-  console.log('listingId', req.params.listingId)
+app.use(morgan('dev'));
+app.use(express.static(dist));
+
+app.get('/listing-photos/:listingId', (req, res) => {
+  console.log('listingId', req.params.listingId);
   const id = req.params.listingId;
   Photos.find({ listingId: id })
-    .then(data => {
-      res.send(data)
+    .then((data) => {
+      res.send(data);
     })
-    .catch(err => {
-      console.log(err)
-    })
-})
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+const html = path.join(__dirname, '/../dist/index.html');
+
+app.get('/:listingId', (req, res) => {
+  res.sendFile(html);
+});
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
