@@ -46,7 +46,6 @@ class App extends React.Component {
   render() {
     if(this.state.photos){
       return (<div>
-        <h1>Hello World</h1>
       <div >
       {this.renderView()}
       </div>

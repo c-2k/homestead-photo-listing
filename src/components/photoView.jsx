@@ -46,8 +46,6 @@ class Slider extends React.Component {
   }
 
   render() {
-    console.log('WHERE MY PROPS AT?',this.props)
-    console.log('WHERE MY STATE AT?', this.state)
     if (this.state.images){
       return (
         <div className="backSlider">

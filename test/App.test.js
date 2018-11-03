@@ -5,6 +5,7 @@ import { shallow, mount, render } from './jest.setup.js';
 import App from '../src/components/app.jsx';
 
 describe('app tests', () => {
+
   it('renders list-items', () => {
     // Replace shallow with mount
     const w = shallow(<App />);
@@ -13,6 +14,7 @@ describe('app tests', () => {
     expect(w).toBeDefined()
   });
 
+  /*PASSING TEST */
   it('check photostream on login', () => {
     const w = mount(<App />)
     const photo = w.html().toLowerCase();
@@ -24,10 +26,27 @@ describe('app tests', () => {
 
   it('check slider on click', () => {
     const w = mount(<App />)
-    console.log('WRAPPER SEARCH', w.debug())
-    const photo = w.find('.viewPhoto').simulate('click');
-    console.log('COMPONENT SEARCH', photo)
+    w.find('.viewPhoto').simulate('click');
+    w.update()
+    expect(w.state().view).toBe('slide')
+  })
 
+  /*FAILING TEST */
+
+  it('FAIL check photostream on login', () => {
+    const w = mount(<App />)
+    const photo = w.html().toLowerCase();
+    expect(photo).not.toContain('fail')
+    expect(photo).not.toContain('fail')
+    expect(photo).not.toContain('fail')
+    expect(photo).not.toContain('fail')
+  })
+
+  it('FAIL check slider on click', () => {
+    const w = mount(<App />)
+    w.find('.viewPhoto').simulate('click');
+    w.update()
+    expect(w.state().view).not.toBe('fail')
   })
 
 });
