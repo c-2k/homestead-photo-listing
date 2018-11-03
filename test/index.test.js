@@ -12,7 +12,7 @@ describe('app tests', () => {
     // console.log(w.debug())
     // Expect the wrapper object to be defined
     expect(w).toBeDefined()
-  })
+  });
 
   it('renders a list item', () => {
     const w = mount(<App />);

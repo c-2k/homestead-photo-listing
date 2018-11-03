@@ -39,6 +39,7 @@
     "aws-sdk": "^2.346.0",
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
+    "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.2",
     "faker": "^4.1.0",

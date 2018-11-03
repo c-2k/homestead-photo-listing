@@ -35,7 +35,7 @@ class App extends React.Component {
     const {view} = this.state
 
     if (view === 'gallery') {
-      return <PhotoStream photos={this.state.photos} view={this.changeView}
+      return <PhotoStream photos={this.state.photos} index={this.state.index} view={this.changeView}
       />
     } else if (view === 'slide') {
       return <Slider photos={this.state.photos} index={this.state.index} view={this.changeView}/>
