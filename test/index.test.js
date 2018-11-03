@@ -7,16 +7,27 @@ import App from '../src/components/app.jsx';
 describe('app tests', () => {
   it('renders list-items', () => {
     // Replace shallow with mount
-    const w = mount(<App />);
+    const w = shallow(<App />);
     // Let's check what wrong in our instance
-    // console.log(w.debug())
     // Expect the wrapper object to be defined
     expect(w).toBeDefined()
   });
 
-  it('renders a list item', () => {
-    const w = mount(<App />);
-    // Check if an element in the Component exists
-    expect(w).toBeTruthy()
+  it('check photostream on login', () => {
+    const w = mount(<App />)
+    const photo = w.html().toLowerCase();
+    expect(photo).toContain('container')
+    expect(photo).toContain('mainpic')
+    expect(photo).toContain('sidepics')
+    expect(photo).toContain('viewphoto')
   })
+
+  it('check slider on click', () => {
+    const w = mount(<App />)
+    console.log('WRAPPER SEARCH', w.debug())
+    const photo = w.find('.viewPhoto').simulate('click');
+    console.log('COMPONENT SEARCH', photo)
+
+  })
+
 });
