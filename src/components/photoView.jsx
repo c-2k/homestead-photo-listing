@@ -58,7 +58,7 @@ class Slider extends React.Component {
             }} onClick={this.goToNextSlide}>
               {
                 this.props.photos.map((image, i, arr) => (
-                    <Slide key={this.props.index} image={image} />
+                    <Slide key={i} image={image} />
                 ))
               }
           </div>
@@ -90,7 +90,7 @@ const Slide = ({ image }) => {
   <div className="slide">
       <p>{image.description}</p>
     <div className='slidePic'>
-      <img src={image.url} />
+      <img src={image.url}/>
     </div>
   </div>
    )
