@@ -2,7 +2,8 @@
 import React from 'react';
 import { shallow, mount, render } from './jest.setup.js';
 
-import App from '../src/components/app.jsx';
+import App from '../src/components/App.jsx';
+
 
 describe('app tests', () => {
 
@@ -15,9 +16,10 @@ describe('app tests', () => {
   });
 
   /*PASSING TEST */
+  const w = mount(<App />)
+  const photo = w.html().toLowerCase();
+
   it('check photostream on login', () => {
-    const w = mount(<App />)
-    const photo = w.html().toLowerCase();
     expect(photo).toContain('container')
     expect(photo).toContain('mainpic')
     expect(photo).toContain('sidepics')
@@ -25,7 +27,7 @@ describe('app tests', () => {
   })
 
   it('check slider on click', () => {
-    const w = mount(<App />)
+    expect(w.state().view).toBe('gallery')
     w.find('.viewPhoto').simulate('click');
     w.update()
     expect(w.state().view).toBe('slide')
@@ -34,16 +36,12 @@ describe('app tests', () => {
   /*FAILING TEST */
 
   it('FAIL check photostream on login', () => {
-    const w = mount(<App />)
-    const photo = w.html().toLowerCase();
-    expect(photo).not.toContain('fail')
-    expect(photo).not.toContain('fail')
-    expect(photo).not.toContain('fail')
     expect(photo).not.toContain('fail')
   })
 
   it('FAIL check slider on click', () => {
     const w = mount(<App />)
+    expect(w.state().view).toBe('gallery')
     w.find('.viewPhoto').simulate('click');
     w.update()
     expect(w.state().view).not.toBe('fail')
