@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, render } from './jest.setup.js';
+import { shallow, mount, render } from '../jest.setup.js';
 
 import SidePhoto from '../src/components/SidePhoto.jsx';
 

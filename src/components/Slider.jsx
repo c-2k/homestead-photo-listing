@@ -54,7 +54,7 @@ class Slider extends React.Component {
     if (this.state.images){
       return (
         <div className="backSlider">
-          <button onClick={() => this.props.view('gallery')}>X</button>
+          <button onClick={() => this.props.view('gallery')} className='slider-button'>X</button>
         <div className="slider" >
           <div className="slider-wrapper"
             style={{

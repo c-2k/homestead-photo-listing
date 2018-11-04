@@ -1,6 +1,6 @@
 //REACT TEST EXISTS
 import React from 'react';
-import { shallow, mount, render } from './jest.setup.js';
+import { shallow, mount, render } from '../jest.setup.js';
 
 import App from '../src/components/App.jsx';
 

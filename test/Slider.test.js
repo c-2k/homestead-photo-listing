@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, render } from './jest.setup.js';
+import { shallow, mount, render } from '../jest.setup.js';
 
 import Slider from '../src/components/Slider.jsx';
 
@@ -19,8 +19,12 @@ describe('Slider tests', () => {
     expect(w).toBeDefined()
   });
 
-const w = mount(<Slider photos={test.photos} />);
-const comp = w.html().toLowerCase()
+const w = mount(<Slider photos={test.photos} index={test.index}/>);
+const comp = w.find('.slidePic').at(0).props().className
+const comp1 = w.find('.slide').at(0).props().className
+const comp2 = w.find('.slider-wrapper').at(0).props().className
+const comp3 = w.find('.slider').at(0).props().className
+const comp4 = w.find('.backSlider').at(0).props().className
 const count = w.find('.slidePic').length
 const count0 =w.find('.slide').length
 const count1 = w.find('.slider-wrapper').length
@@ -30,13 +34,11 @@ const image = w.find('img').length
 const imageP = w.find('img').at(2).props()
 
   it('Slider components all exists', () => {
-    expect(comp).toContain('backslider')
-    expect(comp).toContain('slider')
-    expect(comp).toContain('slide')
-    expect(comp).toContain('slider-wrapper')
-    expect(comp).toContain('slidepic')
-    expect(comp).toContain('backarrow arrow')
-    expect(comp).toContain('nextarrow arrow')
+    expect(comp).toBeTruthy()
+    expect(comp1).toBeTruthy()
+    expect(comp2).toBeTruthy()
+    expect(comp3).toBeTruthy()
+    expect(comp4).toBeTruthy()
   })
 
   it('Clickable images', () => {
