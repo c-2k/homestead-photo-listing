@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
-import PhotoStream from './photoStream.jsx';
-import Slider from './photoView.jsx'
+import PhotoStream from './PhotoStream.jsx';
+import Slider from './Slider.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -53,9 +53,7 @@ class App extends React.Component {
     } else {
       return (<div>Loading...</div>)
     }
-console.log(this.state.photos)
   }
-
 }
 
 export default App;

@@ -1,12 +1,12 @@
 import React from 'react';
-import Main from './mainPhoto.jsx';
-import Side from './sidePhoto.jsx';
+import Main from './MainPhoto.jsx';
+import Side from './SidePhoto.jsx';
 
 const PhotoStream = props => (
   <div className='container'>
   <div className='mainPic'>
       {props.photos.map((ele, index) => {
-        if(index===0){
+        if(index === 0){
           return <div>
             <Main photo={ele} index={index} view={props.view}/>
           </div>
@@ -17,7 +17,7 @@ const PhotoStream = props => (
   <div className='sidePics'>
     {props.photos.map((ele, index) => {
       if (index > 0 && index < 5) {
-        return <Side photo={ele} index={index} view={props.view} />
+        return <Side photo={ele} index={index} view={props.view}/>
       }
     })
     }

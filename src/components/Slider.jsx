@@ -1,4 +1,9 @@
 import React from 'react';
+
+import Slide from './Slide.jsx'
+import LeftArrow from './LeftArrow.jsx'
+import RightArrow from './RightArrow.jsx'
+
 class Slider extends React.Component {
   constructor(props) {
     super(props)
@@ -49,7 +54,7 @@ class Slider extends React.Component {
     if (this.state.images){
       return (
         <div className="backSlider">
-          <button onClick={() => this.props.view('gallery')}>X</button>
+          <button onClick={() => this.props.view('gallery')} className='slider-button'>X</button>
         <div className="slider" >
           <div className="slider-wrapper"
             style={{
@@ -58,7 +63,7 @@ class Slider extends React.Component {
             }} onClick={this.goToNextSlide}>
               {
                 this.props.photos.map((image, i, arr) => (
-                    <Slide key={this.props.index} image={image} />
+                    <Slide key={i} image={image} />
                 ))
               }
           </div>
@@ -76,42 +81,6 @@ class Slider extends React.Component {
       <div>Loading on photoView...</div>
     }
   }
-}
-
-
-const Slide = ({ image }) => {
-  const styles = {
-    backgroundImage: `url(${image.url})`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  }
-  return (
-  <div className="slide">
-      <p>{image.description}</p>
-    <div className='slidePic'>
-      <img src={image.url} />
-    </div>
-  </div>
-   )
-}
-
-
-const LeftArrow = (props) => {
-  return (
-    <div className="backArrow arrow" onClick={props.goToPrevSlide}>
-      <h1>-</h1>
-    </div>
-  );
-}
-
-
-const RightArrow = (props) => {
-  return (
-    <div className="nextArrow arrow" onClick={props.goToNextSlide}>
-      <h1>+</h1>
-    </div>
-  );
 }
 
 export default Slider;
