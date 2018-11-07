@@ -4,13 +4,20 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 50%;
+  height: 336px;
   border: 1px solid gray;
 }
 
 .mainPic {
-  height: 100%;
+  height: 336px;
   width:50%;
+}
+
+.main {
+  height: 336px;
+  width: 100%;
+  align-self: flex-start;
+  overflow: hidden;
 }
 
 .mPhoto{
@@ -19,13 +26,8 @@
   min-width: 712px;
 }
 
-.main {
-  height: 100%;
-  align-self: flex-start;
-  overflow: hidden;
-}
-
 .sidePics{
+  height: 336px;
   width: 50%;
   display: grid;
   grid-template-columns: auto auto;
@@ -33,8 +35,7 @@
 }
 
 .side {
-  height: 100%;
-  border: 1px solid gray;
+  height: 168px;
   overflow: hidden;
 }
 
@@ -45,7 +46,7 @@
   min-width: 350px;
 }
 
-.mainPic img:hover {
+.main img:hover {
   transform: scale(1.05);
 }
 
@@ -58,26 +59,31 @@
 
 .viewPhoto {
   position: absolute;
-  top: 45%;
+  top: 310px;
   left: 80%;
 }
 
 
 /*SLIDER CSS*/
 
+.slidePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .slider {
-  position: center;
-  width: 70%;
-  margin: 0 auto;
-  height: 90%;
+  position: relative;
+  width: 640px;
+  margin: 100px auto;
+  height: 500px;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.backSlider {
-    height: 70%;
-    width: 100%;
-  background-color: gray;
+.description {
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 .slider-wrapper {
@@ -97,6 +103,18 @@
   width: 100%;
 }
 
+.backSlider{
+  position: relative;
+  left: 95%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
 /*ARROW CSS*/
 
 .arrow {
@@ -112,17 +130,17 @@
 
 .nextArrow {
   position: absolute;
-  top: 50%;
-  right: 0%;
+  top: 30%;
+  right: 25px;
   z-index: 999;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .backArrow {
   position: absolute;
-  top: 50%;
-  left: 0%;
+  top: 30%;
+  left: 25px;
   z-index: 999;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 

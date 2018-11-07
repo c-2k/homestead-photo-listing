@@ -1,18 +1,10 @@
 import React from 'react';
 
-const Slide = ({ image }) => {
-  const styles = {
-    backgroundImage: `url(${image.url})`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  }
+const Slide = ({ image, description }) => {
   return (
     <div className="slide">
-      <p>{image.description}</p>
-      <div className='slidePic'>
-        <img src={image.url} />
-      </div>
+      <div className='description'>{description}</div>
+        <img src={image} className='slidePhoto' alt={description}></img>/>
     </div>
   )
 }

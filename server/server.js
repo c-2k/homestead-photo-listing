@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/listing-photos/:listingId', (req, res) => {
+app.get('/listing/:listingId', (req, res) => {
   console.log('listingId', req.params.listingId);
   const id = req.params.listingId;
   Photos.find({ listingId: id })
@@ -41,6 +41,12 @@ const html = path.join(__dirname, '/../dist/index.html');
 
 app.get('/:listingId', (req, res) => {
   res.sendFile(html);
+});
+
+const bundle = path.join(__dirname, '/../dist/bundle.js');
+
+app.get('/:listingId', (req, res) => {
+  res.sendFile(bundle);
 });
 
 app.listen(port, () => {
