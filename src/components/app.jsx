@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import PhotoStream from './PhotoStream.jsx';
 import Slider from './Slider.jsx';
+import './style.css';
 
 class App extends React.Component {
   constructor() {
@@ -25,7 +26,7 @@ class App extends React.Component {
   componentDidMount() {
     const rand = Math.floor(Math.random() * 101)
     const id = Number(window.location.pathname.replace(/\//, '')) || rand;
-    $.get(`/listing-photos/${id}`, data => {
+    $.get(`http://localhost:3001/listing-photos/${id}`, data => {
       this.setState({
         photos: data,
       });
