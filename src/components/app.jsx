@@ -26,7 +26,7 @@ class App extends React.Component {
   componentDidMount() {
     const rand = Math.floor(Math.random() * 101)
     const id = Number(window.location.pathname.replace(/\//, '')) || rand;
-    $.get(`http://localhost:3001/listing/${id}`, data => {
+    $.get(`http://localhost:8081/listing/${id}`, data => {
       this.setState({
         photos: data,
       });
