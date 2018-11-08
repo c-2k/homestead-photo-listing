@@ -53,8 +53,10 @@ class Slider extends React.Component {
   render() {
     if (this.state.images){
       return (
+        <div>
         <div className="backSlider">
           <button onClick={() => this.props.view('gallery')} className='slider-button'>X</button>
+          </div>
         <div className="slider" >
           <div className="slider-wrapper"
             style={{
@@ -63,11 +65,12 @@ class Slider extends React.Component {
             }} onClick={this.goToNextSlide}>
               {
                 this.props.photos.map((image, i, arr) => (
-                    <Slide key={i} image={image} />
+                    <Slide key={i} image={image.url} description={image.description} />
                 ))
               }
           </div>
         </div>
+        <div>
           <LeftArrow
            goToPrevSlide={this.goToPrevSlide}
           />
@@ -75,6 +78,7 @@ class Slider extends React.Component {
           <RightArrow
            goToNextSlide={this.goToNextSlide}
           />
+        </div>
         </div>
       );
     } else {
