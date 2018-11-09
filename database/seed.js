@@ -17,7 +17,7 @@ s3.listObjects(params, (err, data) => {
   if (err) {
     console.log('Error', err);
   } else {
-    const baseURL = 'https://homestead.c2k.s3.amazonaws.com/';
+    const baseURL = 'http://homestead.c2k.s3.amazonaws.com/';
     const urlArr = [];
     console.log('DATA CONTENT', data.Contents.length);
     for (let i = 2; i < data.Contents.length; i++) {
