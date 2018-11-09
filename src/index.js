@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 import App from './components/app.jsx';
 
 
-ReactDOM.render(<App />, document.getElementById('Gallery'));
+ReactDOM.render(<App />, document.getElementById('photoListing'));
 window.Gallery = App;
