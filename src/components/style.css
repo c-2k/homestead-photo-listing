@@ -4,16 +4,16 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 336px;
+  height: 50%;
 }
 
 .mainPic {
-  height: 336px;
+  height: 100%;
   width:50%;
 }
 
 .main {
-  height: 336px;
+  height: 100%;
   width: 100%;
   align-self: flex-start;
   overflow: hidden;
@@ -26,7 +26,7 @@
 }
 
 .sidePics{
-  height: 336px;
+  height: 100%;
   width: 50%;
   display: grid;
   grid-template-columns: auto auto;
@@ -34,7 +34,7 @@
 }
 
 .side {
-  height: 168px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -58,8 +58,11 @@
 
 .viewPhoto {
   position: absolute;
-  top: 35%;
-  left: 80%;
+  top: 45%;
+  left: 93%;
+  border: none;
+  border-radius: 3px;
+  height: 25px;
 }
 
 
