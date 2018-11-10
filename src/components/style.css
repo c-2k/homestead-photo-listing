@@ -57,7 +57,7 @@
 /*BUTTON*/
 
 .viewPhoto {
-  position: fixed;
+  position: absolute;
   white-space: nowrap;
   top: 45%;
   right: 24px;
