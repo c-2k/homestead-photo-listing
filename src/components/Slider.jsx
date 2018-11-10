@@ -10,7 +10,7 @@ class Slider extends React.Component {
 
     this.state = {
       images: this.props.photos,
-      currentIndex: 0,
+      currentIndex: this.props.index || 0,
       translateValue: 0,
     }
     this.goToPrevSlide = this.goToPrevSlide.bind(this)
