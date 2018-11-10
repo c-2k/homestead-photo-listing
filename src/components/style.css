@@ -57,12 +57,23 @@
 /*BUTTON*/
 
 .viewPhoto {
-  position: absolute;
+  position: fixed;
+  white-space: nowrap;
   top: 45%;
-  left: 93%;
+  right: 24px;
+  left: auto;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-size: 14px;
   height: 25px;
+  margin: 0px;
+  line-height: 12px;
+  padding-top:  6px;
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 1px;
+  padding-left:  15px;
+  padding-right:  15px;
 }
 
 

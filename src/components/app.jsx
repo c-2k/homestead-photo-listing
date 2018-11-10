@@ -1,8 +1,8 @@
 import React from 'react';
-import $ from 'jquery';
 import PhotoStream from './PhotoStream.jsx';
 import Slider from './Slider.jsx';
 import './style.css';
+import axios from 'axios'
 
 class App extends React.Component {
   constructor() {
@@ -26,11 +26,15 @@ class App extends React.Component {
   componentDidMount() {
     const rand = Math.floor(Math.random() * 101)
     const id = Number(window.location.pathname.replace(/\//, '')) || rand;
-    $.get(`http://galleryhomestead.us-east-1.elasticbeanstalk.com/listing/${id}`, data => {
-      this.setState({
-        photos: data,
-      });
-    }, 'json');
+    axios.get(`http://galleryhomestead.us-east-1.elasticbeanstalk.com/listing/${id}`)
+    .then((data) => {
+        this.setState({
+          photos: data.data
+        })
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   renderView () {
