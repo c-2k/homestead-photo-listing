@@ -1,13 +1,12 @@
-# Project Name
+# Homestead Reviews
 
-> Project description
+> Homestead is a reimplementation of the AirBnb site's home page. This repo contains the "Gallery" component for that project, which fetches photos from the database, displays them to the user via a React frontend, and allows the user to interact with those photos.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - <a href="https://github.com/c-2k/jackie_proxy-server">Proxy server for running all components</a>
+  - <a href="https://github.com/c-2k/homestead-listing-reviews">homestead-listing-reviews</a>
+  - <a href="https://github.com/c-2k/homestead-listing-detail">homestead-listing-detail</a>
 
 ## Table of Contents
 
@@ -20,8 +19,6 @@
 > Some usage instructions
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
 - etc
