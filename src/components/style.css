@@ -37,7 +37,7 @@
 .side {
   height: 100%;
   overflow: hidden;
-  border: solid 1px;
+  border: solid 3px;
 }
 
 
@@ -61,7 +61,7 @@
 .viewPhoto {
   position: absolute;
   white-space: nowrap;
-  top: 45%;
+  top: 50%;
   right: 24px;
   left: auto;
   border: none;
@@ -168,10 +168,12 @@
 *{
   box-sizing:border-box;
 }
+
 body{
   padding:0;
   margin:0;
 }
+
 nav{
   border-bottom:1px solid #ddd;
   font-family: ‘Helvetica Neue’, sans-serif;
@@ -205,12 +207,17 @@ nav{
 .no-border{
   border-right:0px solid white;
 }
-company{
+
+.company {
   font-family: ‘Helvetica Neue’, sans-serif;
+      margin-top: 5px;
+    margin-bottom: 10px;
 }
+
 .fa{
   color:#ccc;
 }
+
 nav .search{
   height:10em;
   width:20em;
@@ -220,9 +227,11 @@ nav .search{
   border-style:none;
   text-indent:1em;
 }
+
 nav .search:focus{
   outline-style:none;
 }
+
 nav .btn{
     border-radius: 4px;
     font-weight: 400;
@@ -233,11 +242,16 @@ nav .btn{
     letter-spacing: 0.01em;
     background: rgb(255, 90, 95)
 }
-.b-a-host{white-space:nowrap;}
+
+.b-a-host{
+  white-space:nowrap;
+}
+
 .nav-btn.hoverback:hover{
   cursor:pointer;
   background-color:#f8f8f8;
 }
+
 @media (max-width:500px){
   nav{
     flex-direction:column;
