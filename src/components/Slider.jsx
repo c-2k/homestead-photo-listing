@@ -51,7 +51,7 @@ class Slider extends React.Component {
   }
 
   render() {
-    if (this.state.images){
+    if (this.state.images) {
       return (
         <div>
         <div className="backSlider">
