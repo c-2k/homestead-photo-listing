@@ -11,7 +11,7 @@ class Slider extends React.Component {
     this.state = {
       images: this.props.photos,
       currentIndex: this.props.index || 0,
-      translateValue: 0,
+      translateValue: (this.props.index *= -640) || 0,
     }
     this.goToPrevSlide = this.goToPrevSlide.bind(this)
     this.goToNextSlide = this.goToNextSlide.bind(this)
@@ -61,11 +61,11 @@ class Slider extends React.Component {
           <div className="slider-wrapper"
             style={{
               transform: `translateX(${this.state.translateValue}px)`,
-              transition: 'transform ease-out 0.45s'
+              transition: 'transform ease-out 0s'
             }} onClick={this.goToNextSlide}>
               {
                 this.props.photos.map((image, i, arr) => (
-                    <Slide key={i} image={image.url} description={image.description} />
+                    <Slide key={i} image={image.url} description={image.description} length={this.props.photos.length} current={this.state.currentIndex}/>
                 ))
               }
           </div>
