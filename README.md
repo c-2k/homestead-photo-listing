@@ -1,6 +1,6 @@
-# Homestead Reviews
+# Homestead Photos
 
-> Homestead is a reimplementation of the AirBnb site's home page. This repo contains the "Gallery" component for that project, which fetches photos from the database, displays them to the user via a React frontend, and allows the user to interact with those photos.
+> Homestead is a reimplementation of the AirBnb site's listing page. This repo contains the "Gallery" component for that project, which fetches photos from the database, displays them to the user via a React frontend, and allows the user to interact with those photos.
 
 ## Related Projects
 
