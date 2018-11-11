@@ -1,24 +1,6 @@
 
 const sampleData = [
 	{
-		listingId: 50,
-		photoId: "78920614",
-		description: "Quia ad quam.",
-		url: "http://homestead.c2k.s3.amazonaws.com/bundles/gallery.js"
-	},
-	{
-		listingId: 63,
-		photoId: "40566503",
-		description: "Fugit eum porro non numquam explicabo.",
-		url: "http://homestead.c2k.s3.amazonaws.com/bundles/photo"
-	},
-	{
-		listingId: 38,
-		photoId: "06720370",
-		description: "Tempora qui vero doloremque nihil sapiente autem odit id qui.",
-		url: "http://homestead.c2k.s3.amazonaws.com/bundles/reviews"
-	},
-	{
 		listingId: 62,
 		photoId: "47207839",
 		description: "Quisquam asperiores dolores aut repellendus amet beatae.",
