@@ -26,7 +26,7 @@ class App extends React.Component {
   componentDidMount() {
     const rand = Math.floor(Math.random() * 101)
     const id = Number(window.location.pathname.replace(/\//, '')) || rand;
-    axios.get(`http://galleryhomestead.us-east-1.elasticbeanstalk.com/listing/${id}`)
+    axios.get(`http://localhost:8081/listing/${id}`)
     .then((data) => {
         this.setState({
           photos: data.data
