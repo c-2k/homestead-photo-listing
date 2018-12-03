@@ -1,6 +1,14 @@
 import React from 'react';
 import PhotoStream from './PhotoStream.jsx';
-import Slider from './Slider.jsx';
+import Loadable from 'react-loadable';
+import Loading from './Loading.js';
+
+const SliderLoadComponent = Loadable({
+  loader: () => import('./Slider.jsx'),
+  loading: Loading,
+});
+// import Slider from './Slider.jsx';
+
 import './style.css';
 import axios from 'axios'
 
@@ -44,7 +52,7 @@ class App extends React.Component {
       return <PhotoStream photos={this.state.photos} index={this.state.index} view={this.changeView}
       />
     } else if (view === 'slide') {
-      return <Slider photos={this.state.photos} index={this.state.index} view={this.changeView}/>
+      return <SliderLoadComponent photos={this.state.photos} index={this.state.index} view={this.changeView}/>
     }
   }
 
