@@ -14,23 +14,24 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
-
-> Some usage instructions
-
 ## Requirements
 
-- Node 6.13.0
+- Node
 - etc
 
-## Development
+## Getting started
+Clone the repo with
+```git clone https://github.com/thisisjackie/homestead-photo-listing.git```
 
-### Installing Dependencies
+Install dependencies with
+```npm i```
 
-From within the root directory:
+Run mongodb database and seed with
+```npm run data```
 
-```sh
-npm install -g webpack
-npm install
-```
+Create bundle and start server
+```npm start```
+
+Now open the browser and navigate to `http://localhost:8081` and you get the working homestead-Gallery app.
+
 

@@ -7,7 +7,7 @@
     "test": "jest --coverage --watch --config ./jest.config.js",
     "wbdev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --mode production",
-    "start": "node ./server/server.js",
+    "start": "webpack --mode production & node ./server/server.js",
     "data": "node ./database/data.js"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@types/node": "^10.12.1",
@@ -43,11 +44,15 @@
     "babel-core": "7.0.0-bridge.0",
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
+    "compression-webpack-plugin": "^2.0.0",
     "express": "^4.16.2",
     "faker": "^4.1.0",
     "mongoose": "^5.3.6",
     "morgan": "^1.9.0",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "react-loadable": "^5.5.0",
+    "uglifyjs": "^2.4.11",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   }
 }

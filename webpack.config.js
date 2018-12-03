@@ -1,4 +1,6 @@
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -23,7 +25,13 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CompressionPlugin(),
+  ],
   devServer: {
     contentBase: './dist',
     hot: true,
