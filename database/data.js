@@ -7,7 +7,7 @@ const sampleData = require('./users.js');
 const insertSamplePhotos = () => {
   Photo.create(sampleData)
     .then(() => {console.log('successful insertion')})
-    .catch((err) => console.log(err) );
+    .catch((err) => console.log('INSERT PHOTO ERROR--->',err) );
 };
 
 insertSamplePhotos();
