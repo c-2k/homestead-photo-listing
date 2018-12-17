@@ -25,9 +25,6 @@ Clone the repo with
 Install dependencies with
 ```npm i```
 
-Run mongodb database and seed with
-```npm run data```
-
 Create bundle and start server
 ```npm start```
 
