@@ -20,8 +20,7 @@
 
 ## Getting started
 See Deployed App On
-
-```https://frozen-springs-54231.herokuapp.com/```
+<a href="https://frozen-springs-54231.herokuapp.com/">https://frozen-springs-54231.herokuapp.com/</a>
 
 Clone the repo with
 ```git clone https://github.com/thisisjackie/homestead-photo-listing.git```
